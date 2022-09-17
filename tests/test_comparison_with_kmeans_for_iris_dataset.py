@@ -29,6 +29,7 @@ if __name__ == '__main__':
         predict_kmeans = k_means_model.predict([x])
         matrix_confusion_kmeans[predict-1][y-1] += 1
 
+    plt.figure(figsize=(15, 30))
     for i, target in enumerate(dataset.target_names):
         plt.subplot(2, 3, i+1)
         plt.title(f"target = {i}")
