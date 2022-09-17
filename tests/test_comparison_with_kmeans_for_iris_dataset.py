@@ -31,13 +31,13 @@ if __name__ == '__main__':
 
     for i, target in enumerate(dataset.target_names):
         plt.subplot(2, 3, i+1)
-        plt.title(f"Results when target is {i}")
+        plt.title(f"target = {i}")
         for j, res in enumerate(matrix_confusion[i]):
             plt.bar(f"{dataset.target_names[j]}", res)
 
     for i, target in enumerate(dataset.target_names):
         plt.subplot(2, 3, i+4)
-        plt.title(f"Results with kmeans when target is {i}")
+        plt.title(f"target = {i} with kmeans")
         for j, res in enumerate(matrix_confusion_kmeans[i]):
             plt.bar(f"{dataset.target_names[j]}", res)
 
