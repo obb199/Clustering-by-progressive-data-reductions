@@ -24,7 +24,7 @@ if __name__ == '__main__':
 
     for i, target in enumerate(dataset.target_names):
         plt.subplot(1, 3, i+1)
-        plt.title(f"Results when target is {dataset.target_names[i]}")
+        plt.title(f"Results when target is {i}")
         for j, res in enumerate(matrix_confusion[i]):
             plt.bar(f"{dataset.target_names[j]}", res)
 
