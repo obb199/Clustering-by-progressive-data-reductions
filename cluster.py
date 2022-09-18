@@ -64,7 +64,10 @@ def cluster_generator(initial_points, n_clusters):
                             distance_matrix[idx_point][idx_test] = distance_of_two_points(p[idx_point], p[idx_test])
 
                 idx_p1, idx_p2 = argmin_matrix(distance_matrix)
-                new_point = [(p[idx_p1][0] + p[idx_p1][0])/2, (p[idx_p1][1] + p[idx_p1][1])/2]
+                new_point = []
+                for dim in range(len(p[idx_point])):
+                    new_point.append((p[idx_p1][dim] + p[idx_p2][dim])/2)
+
                 p.pop(idx_p1)
                 p.pop(idx_p2)
                 p.append(new_point)
