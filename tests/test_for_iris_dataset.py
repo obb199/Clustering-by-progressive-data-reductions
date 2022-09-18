@@ -15,12 +15,15 @@ if __name__ == '__main__':
                                                         shuffle=True,
                                                         random_state=42)
 
-    cluster_points = cluster_generator(X_train, 3)
+    cluster_points = Cluster(3)
+    cluster_points.fit(X_train)
 
+    predict = cluster_points.predict(X_test)
+
+    i = 0
     for x, y in zip(X_test, y_test):
-        distances_from_clusters = distance_from_centroids(x, cluster_points)
-        predict = argmin(distance_from_centroids(x, cluster_points))
-        matrix_confusion[predict-1][y-1] += 1
+        matrix_confusion[predict[i]-1][y-1] += 1
+        i += 1
 
     for i, target in enumerate(dataset.target_names):
         plt.subplot(3, 1, i+1)
