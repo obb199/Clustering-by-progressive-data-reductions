@@ -15,10 +15,9 @@ def algorithm_test(clusters_matrix, points, name_output_figure):
 
             clusters = Cluster(number_of_clusters)
             clusters.fit(points[point_idx])
-
-            for p in points[point_idx]:
-                cluster_color = clusters.predict(p)
-                plt.scatter(p[0], p[1], color=colors[cluster_color], alpha=0.6)
+            predicts = clusters.predict(points[point_idx])
+            for idx, p in enumerate(points[point_idx]):
+                plt.scatter(p[0], p[1], color=colors[predicts[idx]], alpha=0.6)
 
             for c in clusters.centroids_positions:
                 plt.scatter(c[0], c[1], color='red')
