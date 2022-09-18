@@ -2,9 +2,12 @@ from utils import *
 
 
 def distance_of_two_points(p1, p2):
-    if len(p1) == 3:
-        return ((p1[0] - p2[0])**2 + (p1[1] - p2[1])**2 + (p1[2] - p2[2])**2)**0.5
-    return ((p1[0] - p2[0])**2 + (p1[1] - p2[1])**2)**0.5
+    distance = 0
+
+    for dim in range(len(p1)):
+        distance += (p1[dim] - p2[dim])**2
+
+    return distance**0.5
 
 
 def points_reduction(points):
@@ -30,8 +33,9 @@ def points_reduction(points):
     for idx_point in range(len(points)):
         for idx_test in range(len(points)):
             if index_nearest_point[idx_point] == idx_test and index_nearest_point[idx_test] == idx_point:
-                new_point = [(points[idx_point][0] + points[idx_test][0])/2,
-                             (points[idx_point][1] + points[idx_test][1])/2]
+                new_point = []
+                for dim in range(len(points[idx_point])):
+                    new_point.append((points[idx_point][dim] + points[idx_test][dim])/2)
 
                 used_points.append(index_nearest_point[idx_point])
 
@@ -74,4 +78,3 @@ def distance_from_centroids(point, centroids):
         d.append(distance_of_two_points(point, centroid))
 
     return d
-
