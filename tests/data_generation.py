@@ -20,7 +20,7 @@ def random_points_generator(n_points, min_x, max_x, min_y, max_y, coordinates=Fa
     return points
 
 
-def circular_distribution_generator(r=1, concentration_rate=1, n_points=100, center_position_x=0, center_position_y=0):
+def circular_distribution_generator(radius=1, concentration_rate=1, n_points=100, center_position_x=0, center_position_y=0):
     points = []
     angle = 0
 
@@ -28,8 +28,8 @@ def circular_distribution_generator(r=1, concentration_rate=1, n_points=100, cen
     while len(points) < n_points:
         angle += rotation_rate
         rad = math.pi*angle/180
-        x = (r-r*random.random()*concentration_rate)*math.cos(rad) + center_position_x
-        y = (r-r*random.random()*concentration_rate)*math.sin(rad) + center_position_y
+        x = (radius-radius*random.random()*concentration_rate)*math.cos(rad) + center_position_x
+        y = (radius-radius*random.random()*concentration_rate)*math.sin(rad) + center_position_y
         points.append([x, y])
 
     return points
