@@ -1,4 +1,4 @@
-# Grouping by progressive data reduction
+# Clustering by progressive data reduction
 #1 - calculate the distance from each point to the other N-1 points 
 2 - swap the nearest pairs of points for a new point that is the average of the double 
 3 - repeat steps 1 and 2 until the set has a predetermined amount of k points or the number of points is less than k 
@@ -6,7 +6,7 @@
 5 - the remaining k points will be used as a reference for groupings. 
 6 - for a new point p outside the set, p has k distances and will belong to the group where the distance is shorter.
 
-# Agrupamento por redução progressiva de dados
+# Clusterização por redução progressiva de dados
 #1 - calcular a distância de cada ponto até os n-1 outros pontos
 2 - trocar os pares de pontos mais próximos por um novo ponto que seja a média da dupla
 3 - repetir os passos 1 e 2 até que o conjunto possua uma quantidade pré-determinada de k pontos ou que o número de pontos seja menor que k
