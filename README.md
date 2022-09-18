@@ -1,5 +1,5 @@
 # Clustering by progressive data reduction
-1 - calculate the distance from each point to the other N-1 points\n
+1 - calculate the distance from each point to the other N-1 points
 2 - swap the nearest pairs of points for a new point that is the average of the double 
 3 - repeat steps 1 and 2 until the set has a predetermined amount of k points or the number of points is less than k 
 4 - if the new amount of points is less than the given, it will be necessary to regress the set to the previous iteration and join the two points closer to reaching k. 
