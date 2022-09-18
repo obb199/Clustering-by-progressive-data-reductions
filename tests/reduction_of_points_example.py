@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-from cluster import points_reduction
+from cluster import Cluster
 from data_generation import circular_distribution_generator
 from utils import separate_axis
 
@@ -27,7 +27,7 @@ if __name__ == '__main__':
     i = 0
     while len(circles) > 3:
         i += 1
-        circles = points_reduction(circles)
+        circles = Cluster._points_reduction(circles)
         x, y = separate_axis(circles)
 
         plt.subplot(6, 4, i)
