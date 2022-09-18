@@ -13,3 +13,8 @@
 4 - caso a nova quantidade de pontos seja menor que o determinado, será necessário regredir o conjunto à iteração anterior e juntar os dois pontos mais próximos até atingir k.
 5 - os k pontos que sobrarem serão utilizados como referência para agrupamentos
 6 - para um novo ponto p fora do conjunto, p possui k distâncias e pertencerá ao grupo em que a distância for menor.
+
+#Exemplos de resultados:
+![test for readme](https://user-images.githubusercontent.com/74666057/190880229-eb2cf336-a485-4811-93f7-ce74797c94d9.png)
+
+![curves for readme](https://user-images.githubusercontent.com/74666057/190880275-221bfaf8-9e0f-4d2d-9b73-9ea125d4013b.png)
