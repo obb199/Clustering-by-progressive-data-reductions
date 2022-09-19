@@ -52,7 +52,7 @@ class Cluster:
                 new_points.append(points[i])
 
         return new_points
-    
+
     def fit(self, initial_points):
         p = initial_points
         while len(p) > self.n_clusters:
