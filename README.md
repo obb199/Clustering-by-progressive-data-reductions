@@ -19,4 +19,4 @@
 
 ![curves for readme](https://user-images.githubusercontent.com/74666057/190880275-221bfaf8-9e0f-4d2d-9b73-9ea125d4013b.png)
 
-**you can find the code of these examples and others in the project ("test" file).
+**you can find the code of these examples and others in the project ("tests" file).
